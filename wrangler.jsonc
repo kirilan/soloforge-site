@@ -1,0 +1,6 @@
+{
+  "name": "soloforge-site",
+  "compatibility_date": "2026-07-06",
+  // Static assets only — no Worker script. Serves the files in this repo directly.
+  "assets": { "directory": "./public" }
+}
