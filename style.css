@@ -1,0 +1,84 @@
+:root {
+  --bg: #0e1116;
+  --panel: #161b22;
+  --border: #262c36;
+  --text: #e6edf3;
+  --muted: #9aa4b2;
+  --accent: #f2a03d;
+  --accent-fg: #1a1206;
+  --max: 960px;
+}
+
+* { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font: 16px/1.6 system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+}
+
+a { color: var(--accent); }
+
+.wrap { max-width: var(--max); margin: 0 auto; padding: 0 20px; }
+
+section { padding: 56px 0; }
+
+h1, h2 { line-height: 1.2; }
+
+/* Hero */
+.hero {
+  text-align: center;
+  padding: 72px 20px 56px;
+  background:
+    linear-gradient(180deg, rgba(14,17,22,.82), rgba(14,17,22,.92) 60%, var(--bg)),
+    url("assets/featureGraphic.png") center/cover no-repeat;
+}
+.hero img.icon {
+  width: 96px; height: 96px; border-radius: 22px;
+  box-shadow: 0 6px 24px rgba(0,0,0,.5);
+}
+.hero h1 { font-size: 2.6rem; margin: 18px 0 6px; }
+.hero .tagline { color: var(--muted); font-size: 1.15rem; margin: 0 auto 28px; max-width: 40ch; }
+
+.badges { display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; }
+.badge {
+  display: inline-flex; align-items: center; gap: 8px;
+  padding: 12px 20px; border-radius: 10px; font-weight: 600;
+  text-decoration: none; border: 1px solid var(--border);
+}
+.badge.primary { background: var(--accent); color: var(--accent-fg); border-color: var(--accent); }
+.badge.ghost { background: var(--panel); color: var(--text); }
+.badge small { display: block; font-weight: 400; font-size: .72rem; color: var(--muted); }
+.badge.primary small { color: rgba(26,18,6,.7); }
+
+/* Screenshots */
+.shots { display: flex; gap: 16px; overflow-x: auto; padding-bottom: 12px; scroll-snap-type: x mandatory; }
+.shots img {
+  height: 460px; border-radius: 16px; border: 1px solid var(--border);
+  scroll-snap-align: center; flex: 0 0 auto;
+}
+
+/* Feature / info panels */
+.grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 16px; }
+ul.features { list-style: none; padding: 0; margin: 0; }
+ul.features li { padding: 8px 0 8px 28px; position: relative; }
+ul.features li::before { content: "›"; color: var(--accent); position: absolute; left: 6px; font-weight: 700; }
+
+.panel { background: var(--panel); border: 1px solid var(--border); border-radius: 14px; padding: 24px; }
+.panel h2 { margin-top: 0; }
+.muted { color: var(--muted); }
+
+.privacy .grid .item { padding-left: 4px; }
+.privacy .item strong { color: var(--text); }
+
+/* Footer */
+footer { border-top: 1px solid var(--border); padding: 32px 0; color: var(--muted); text-align: center; }
+footer a { margin: 0 8px; }
+
+/* Privacy policy page */
+.doc { max-width: 760px; }
+.doc h1 { font-size: 2rem; }
+.doc h2 { margin-top: 32px; }
