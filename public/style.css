@@ -86,11 +86,14 @@ h2 + .muted { margin-top: 0; max-width: 60ch; }
 
 .badges { display: flex; flex-wrap: wrap; gap: 14px; justify-content: center; }
 .badge {
-  display: inline-flex; flex-direction: column; align-items: center; gap: 2px;
-  padding: 13px 26px; border-radius: 12px; font-weight: 650;
+  display: inline-flex; align-items: center; gap: 11px;
+  padding: 13px 24px; border-radius: 12px; font-weight: 650;
   text-decoration: none; border: 1px solid var(--border);
   transition: transform .15s ease, box-shadow .15s ease, border-color .15s ease;
 }
+.badge-icon { width: 26px; height: 26px; flex: 0 0 auto; }
+.badge.primary .badge-icon { filter: brightness(0) opacity(.85); }
+.badge span { display: flex; flex-direction: column; align-items: flex-start; gap: 1px; }
 .badge:hover { transform: translateY(-2px); }
 .badge.primary {
   background: linear-gradient(180deg, #f7b055, #ea9226);
