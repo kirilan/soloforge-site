@@ -85,7 +85,7 @@ h2 + .muted { margin-top: 0; max-width: 60ch; }
   background: rgba(255,255,255,.02);
 }
 
-.badges { display: flex; flex-wrap: wrap; gap: 14px; justify-content: center; }
+.badges { display: flex; flex-wrap: wrap; gap: 14px; justify-content: center; align-items: center; }
 .badge {
   display: inline-flex; align-items: center; gap: 11px;
   padding: 13px 24px; border-radius: 12px; font-weight: 650;
@@ -95,10 +95,12 @@ h2 + .muted { margin-top: 0; max-width: 60ch; }
 .badge-icon { width: 26px; height: 26px; flex: 0 0 auto; }
 .badge span { display: flex; flex-direction: column; align-items: flex-start; gap: 1px; }
 .badge:hover { transform: translateY(-2px); }
-.badge.ghost { background: var(--panel); color: var(--text); }
+.badge.ghost { background: var(--panel); color: var(--text); padding: 4px 20px; }
 .badge.ghost:hover { border-color: #38414f; box-shadow: 0 8px 24px rgba(0,0,0,.4); }
 .badge-img { display: inline-flex; align-items: center; transition: transform .15s ease; }
-.badge-img img { height: 68px; width: auto; display: block; }
+/* the badge artwork carries ~33% transparent margin, so the visible button
+   is much shorter than the box — size it so it matches the GitHub pill */
+.badge-img img { height: 83px; width: auto; display: block; }
 .badge-img:hover { transform: translateY(-2px); }
 .badge small { font-weight: 400; font-size: .72rem; color: var(--muted); }
 
