@@ -103,6 +103,9 @@ h2 + .muted { margin-top: 0; max-width: 60ch; }
 .badge.primary:hover { box-shadow: 0 8px 32px rgba(242,160,61,.4); }
 .badge.ghost { background: var(--panel); color: var(--text); }
 .badge.ghost:hover { border-color: #38414f; box-shadow: 0 8px 24px rgba(0,0,0,.4); }
+.badge-img { display: inline-flex; align-items: center; transition: transform .15s ease; }
+.badge-img img { height: 68px; width: auto; display: block; }
+.badge-img:hover { transform: translateY(-2px); }
 .badge small { font-weight: 400; font-size: .72rem; color: var(--muted); }
 .badge.primary small { color: rgba(26,18,6,.7); }
 
