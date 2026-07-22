@@ -13,7 +13,7 @@
 <main class="wrap doc">
   <section>
     <h1>Privacy Policy</h1>
-    <p class="muted">Solo Forge · Last updated 6 July 2026</p>
+    <p class="muted">Solo Forge · Last updated 22 July 2026</p>
 
     <p>Solo Forge is a local-first Android fitness app. It is designed so that your data stays on your device. The developer does not collect, receive, store, or have access to any of your data.</p>
 
@@ -22,6 +22,15 @@
 
     <h2>Where your data lives</h2>
     <p>All data you enter — meals, weight entries, fasting history, workouts, settings, and exports — is stored locally on your device. Android's cloud backup is disabled for the app, so this data is not copied to Google's servers. You can create a full backup to a single file, and optionally auto-backup to a folder you choose. Those files stay wherever you put them.</p>
+
+    <h2>Health Connect</h2>
+    <p>Solo Forge can sync weight and workout data with <a href="https://health.google/health-connect-android/">Health Connect</a>, Android's health data store. Health Connect lives on your phone; it is not a cloud service, and syncing with it does not send anything off your device or to the developer.</p>
+    <p>This is off by default. Importing and exporting are two separate switches in Settings, and each one asks for its permissions only when you turn it on. You can grant a subset — for example, allow weight but not workouts. Solo Forge reads and writes only two kinds of data:</p>
+    <ul>
+      <li><strong>Weight</strong> — read, so entries recorded by a smart scale or another app appear in Solo Forge without retyping; written, so weight you log here is visible to your other health apps.</li>
+      <li><strong>Exercise sessions</strong> — read, so workouts recorded by a fitness tracker appear in your Solo Forge history and dashboard totals; written, so workouts you time here are visible to your other health apps.</li>
+    </ul>
+    <p>Health data obtained through Health Connect is used only to show you your own history inside the app. It is never transmitted to the developer or to any third party, is not used for advertising, and is not sent to OpenRouter or any other service. Data imported into Solo Forge is stored locally like anything else you enter, and you can delete it in the app at any time. You can revoke Solo Forge's access whenever you like from Health Connect in Android Settings, or by turning the switches off in the app; revoking access stops all syncing, and Health Connect can also delete the data Solo Forge wrote there.</p>
 
     <h2>The one network feature</h2>
     <p>Solo Forge makes a network request only when <strong>you</strong> start food photo analysis. In that case, the photo or text you submit is sent to OpenRouter (<a href="https://openrouter.ai">openrouter.ai</a>) using an API key that you provide. This feature is opt-in: it does nothing until you enter your own key, and it can be disabled at any time. Data sent to OpenRouter is governed by <a href="https://openrouter.ai/privacy">OpenRouter's privacy policy</a>. No other part of the app sends anything over the network.</p>
