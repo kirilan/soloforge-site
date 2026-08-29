@@ -88,6 +88,24 @@
   <div class="panel">
     <h2>About the AI food analysis</h2>
     <p>The one and only optional network feature. When you start food photo analysis, that photo or text is sent to <a href="https://openrouter.ai">OpenRouter</a> using <strong>your own API key</strong>. It is off until you set a key, and Solo Forge makes zero network calls otherwise. Everything else — meals, weight, fasting history, workouts, settings, exports — stays on your device.</p>
+
+    <h3>You pick the model</h3>
+    <p class="muted">Settings offers four tested options, or you can type in any OpenRouter model id. Each analysis is a single request to the model you chose — never a silent chain of calls to progressively bigger models.</p>
+    <div class="grid">
+      <div class="item"><strong>Fastest</strong><br><span class="muted">The default. Answers in about two seconds.</span></div>
+      <div class="item"><strong>Balanced</strong><br><span class="muted">Asks you fewer follow-up questions.</span></div>
+      <div class="item"><strong>Open-weight</strong><br><span class="muted">An Apache-2.0 model, and the cheapest to run.</span></div>
+      <div class="item"><strong>Most accurate</strong><br><span class="muted">Lowest calorie error we measured.</span></div>
+    </div>
+
+    <h3>The numbers in Settings are ours, not the vendors&rsquo;</h3>
+    <p class="muted">Every model is labelled with its typical response time, how often it answers without needing a follow-up question, its average calorie error, and roughly what it costs to run. Those figures come from a test set in the app&rsquo;s own repository — dish photos with scale-measured ground truth, plus real phone photos — replaying exactly the request the app sends. Nothing is quoted from a vendor benchmark. In August 2026 <strong>every vision model OpenRouter had carried in the previous twelve months was screened this way</strong>: 108 candidates, and only a handful were good enough and fast enough to offer. Nearly a third of them took over 20 seconds to read a photo of dinner.</p>
+    <p class="muted">If a model has not been tested, the app says so instead of showing a number. That is why the custom-model field carries a warning where the other options carry figures.</p>
+
+    <h3>It tells you when it is unsure</h3>
+    <p class="muted">A calorie estimate from a photo is a guess, and the honest failure is almost always the same one: <strong>portion size</strong>. It shows up in around 80% of all analyses, far ahead of anything else. So instead of quietly rounding, Solo Forge names what it could not tell — the portion, the cooking method, oil or sauce you cannot see — and lets you correct it before saving.</p>
+    <p class="muted">A stronger model does not fix this. It cannot see how many grams are on the plate, or the oil already in the pan. Where a bigger model genuinely helps — telling one dish from another — there is a button to retry with one, and it is hidden on the options that have nothing stronger above them rather than offering a sideways move.</p>
+    <p class="muted">The full method, every rejected model, and the reasoning behind each decision are in the <a href="https://github.com/kirilan/SoloForge#food-analysis-models">public repository</a>.</p>
   </div>
 </section>
 

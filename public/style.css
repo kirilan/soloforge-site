@@ -149,17 +149,23 @@ ul.features li::before {
   box-shadow: 0 1px 0 rgba(255,255,255,.04) inset, 0 20px 40px rgba(0,0,0,.25);
 }
 .panel h2 { margin-top: 0; }
+.panel h3 { font-size: 1.05rem; letter-spacing: -0.01em; margin: 28px 0 6px; }
+.panel h3 + .muted { margin-top: 0; max-width: 70ch; }
 .muted { color: var(--muted); }
 
 .privacy .grid { margin-top: 24px; }
-.privacy .grid .item {
+.panel .grid { margin: 16px 0 4px; }
+.privacy .grid .item,
+.panel .grid .item {
   padding: 16px;
   background: rgba(255,255,255,.02);
   border: 1px solid var(--border-soft);
   border-radius: 12px;
 }
-.privacy .item strong { color: var(--text); }
-.privacy .item .muted { font-size: .92rem; }
+.privacy .item strong,
+.panel .item strong { color: var(--text); }
+.privacy .item .muted,
+.panel .item .muted { font-size: .92rem; }
 
 /* Footer */
 footer { border-top: 1px solid var(--border-soft); padding: 40px 0; color: var(--muted); text-align: center; }
